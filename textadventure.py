@@ -1,5 +1,3 @@
-import sys
-
 location = (0,0,0)
 alive = True
 commandList = ['north', 'east', 'west', 'look']
@@ -18,7 +16,7 @@ def Command(cmd):
     global description
 
     if cmd not in commandList:
-        print("Nope. Nope. To the Nope. Try again.")
+        print("\nNope. Nope. To the Nope. Try again.\n")
         return
     else:
         if cmd == 'look':
@@ -32,7 +30,7 @@ def Command(cmd):
             print("\nYou enter the cave.\n")
             print("It's dangerous to go alone. Take this.")
             print("You are now equipped with a stick.")
-        elif cmd in {'north', 'south', 'east'}:
+        elif cmd in {'north', 'west', 'east'}:
             print("\nYou fell into a pit and died.")
             print("\nGAME OVER\n")
             alive = False
